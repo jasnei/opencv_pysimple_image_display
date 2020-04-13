@@ -24,8 +24,8 @@ YUV:        change image color to YUV
 Cal_EQ:     Image equalizeHist
 threshold:  simple b/w-threshold on the luma channel, slider sets the threshold value
 canny:      edge finding with canny, sliders set the two threshold values for the function => edge sensitivity
-contour:    colour finding in the frame, first slider sets the hue for the colour to find, second the minimum saturation
-            for the object. Found objects are drawn with a red contour.
+contour:    contour finding in the frame, slider sets the value of threshold for b/w using threshold to find
+            Found objects are drawn with a red contour.
 blur:       simple Gaussian blur, slider sets the sigma, i.e. the amount of blur smear
 
 """
@@ -67,7 +67,7 @@ def main():
      sg.Slider((0, 255), 128, 1, orientation='h', size=(16, 15), key='canny_slider_b')],
       
     [sg.Radio('Contour', 'Radio', size=(10, 1), key='contour'),
-     sg.Slider((0, 255), 128, 1, orientation='h', size=(20, 15), key='contour_slider'),],
+     sg.Slider((0, 255), 128, 1, orientation='h', size=(40, 15), key='contour_slider'),],
       
     [sg.Radio('Blur', 'Radio', size=(10, 1), key='blur'),
      sg.Slider((1, 11), 1, 1, orientation='h', size=(40, 15), key='blur_slider')], 
