@@ -2,7 +2,9 @@
 """
 Created on Wed Apr  8 19:47:08 2020
 
-@author: Administrator
+@author: AlbertYang
+jasnei@163.com
+version v1.0
 """
 
 
